@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:A2_final.Views"
+             x:Class="A2_final.Views.FavouritePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFF">            <StackLayout x:Name="progressBarLayout"
+                         Orientation="Vertical"
+                         VerticalOptions="CenterAndExpand">                <Label TextColor="#6200EE"
+                       HorizontalOptions="CenterAndExpand"
+                       Text="Loading the results from database"></Label>                <ActivityIndicator IsRunning="True"></ActivityIndicator>            </StackLayout>            <StackLayout x:Name="resultsLayout"
+                         Orientation="Vertical"
+                         HorizontalOptions="Center"
+                         IsVisible="False">                <ListView x:Name="SavedResultsListView"
+                          Margin="0, 20, 0, 0"
+                          RowHeight="150"
+                          ItemSelected="ClickedFoodItem">                    <ListView.ItemTemplate>                        <DataTemplate>                            <local:ProductCell FoodItem="{Binding .}"></local:ProductCell>                        </DataTemplate>                    </ListView.ItemTemplate>                </ListView>            </StackLayout>        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

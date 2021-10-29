@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2_final.Views.ProductCell">
+    <ViewCell.View>
+        <StackLayout x:Name="cellLayout" Orientation="Vertical" Margin="20,0">
+            <Image x:Name="productImage" Source="{Binding photo.thumb}" Aspect="AspectFit"></Image>
+            <Label FontSize="Large" Text="{Binding food_name}" />
+            <Label Text="{Binding brand_name,StringFormat='Brand: {0}'}" />
+            <Label Text="{Binding nf_calories, StringFormat='Calories: {0}'}" />
+            <Label Text="{Binding serving_qty, StringFormat='Servings: {0}'}" />
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

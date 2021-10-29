@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2_final.Views.SearchPage"
+             Title="Nutrition Bot">
+    <ContentPage.Content>
+        <StackLayout Padding="40"
+                     Orientation="Vertical"
+                     BackgroundColor="#FFF">
+            <StackLayout Orientation="Vertical"
+                         VerticalOptions="Center">
+                <Label FontSize="30"
+                       Text="Nutritionalize Your Life!"
+                       TextColor="#6200EE"
+                       Margin="0,0,0,40" />
+                <Entry x:Name="SearchTextbox"
+                       Placeholder="Pizza"
+                       Margin="0,0,0,30"
+                       TextChanged="UserInputedChanged" />
+                <Button x:Name="SearchButton"
+                        Text="Search"
+                        TextColor="#FFF"
+                        BackgroundColor="#6200EE"
+                        BorderRadius="15"
+                        WidthRequest="100"
+                        HeightRequest="50"
+                        Clicked="ClickedSearchButton"
+                        Margin="0,0,0,20"
+                        IsEnabled="False" />
+                <Button x:Name="FavouriteButton"
+                        Text="Favourites"
+                        TextColor="#000"
+                        BackgroundColor="#03DAC6"
+                        BorderRadius="15"
+                        Clicked="FavouriteButtonClicked"
+                        WidthRequest="100"
+                        HeightRequest="50" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
